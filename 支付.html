@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<style>
+		*{margin: 0;padding: 0;list-style: none;}
+		.box{width: 750px;height: 800px;background:pink;}
+		@media screen and (min-width:320px) and (max-width:640px) {
+			.box{width: 100%;background:#28B042;}
+			.top{height: 60px;width: 100%;background:skyblue;}
+			.top li{width: 50%; height: 60px;float:left;text-align: center; line-height:60px;font-size:20px;color:hotpink;}
+			.content{width: 80%;height: 500px;margin: auto;padding-top:20px;}
+			.content img{width: 100%;}
+			.content .dis{display:none;}
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="box">
+		<div class="top">
+			<li onclick="wei()">微信</li>
+			<li onclick="wei2()">支付宝</li>
+		</div>
+		<div class="content">
+			<div id="img1"><img src="./images/微信_03.jpg" alt=""></div>
+			<div id="img2" class="dis"><img src="./images/支付宝_03.jpg" alt=""></div>
+		</div>
+	</div>
+	
+	<script>
+		let img1 = document.querySelector('#img1')
+		let img2 = document.querySelector('#img2')
+		function wei(){
+			// console.log(this)
+			img1.style.display='block'
+			img2.style.display='none'
+			box.style.background='#28B042'
+		}
+		function wei2(){
+			// console.log(this)
+			img1.style.display='none'
+			img2.style.display='block'
+			box.style.background='royalblue'
+		}
+	</script>
+	
+	 
+</body>
+</html>
